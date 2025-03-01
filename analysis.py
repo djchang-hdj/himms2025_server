@@ -695,5 +695,9 @@ def main():
     
     return app
 
+# Create the app instance
+app = main()
+server = app.server  # Expose server variable for render.com
+
 if __name__ == "__main__":
-    main()
+    app.run_server(debug=False)
